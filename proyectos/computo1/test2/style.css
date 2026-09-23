@@ -1,0 +1,383 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px;
+
+    background: linear-gradient(
+        -45deg,
+        #667eea,
+        #764ba2,
+        #00c6ff,
+        #0072ff
+    );
+
+    background-size: 400% 400%;
+    animation: fondo 12s ease infinite;
+
+    color: #333;
+}
+
+
+/* Animación del fondo */
+
+@keyframes fondo {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* ================================
+   FORMULARIOS
+================================ */
+
+form {
+
+    max-width: 700px;
+    margin: auto;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.25);
+
+    animation: aparecer 0.8s ease;
+
+}
+
+
+/* Entrada del formulario */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* ================================
+   TITULOS
+================================ */
+
+h1,
+h2,
+h3 {
+
+    text-align: center;
+
+    color: white;
+
+    text-shadow:
+        0 4px 10px rgba(0,0,0,0.3);
+
+    animation:
+        titulo 2s infinite alternate;
+
+}
+
+
+@keyframes titulo {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+
+}
+
+
+
+/* ================================
+   LABELS
+================================ */
+
+label {
+
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 8px;
+
+    color: white;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* ================================
+   INPUTS Y SELECTS
+================================ */
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.9);
+
+    font-size: 16px;
+
+    transition:
+
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+
+/* Animación al pasar */
+
+input:hover,
+select:hover,
+textarea:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* Animación al escribir */
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    outline: none;
+
+    background:white;
+
+    transform: scale(1.03);
+
+    box-shadow:
+
+        0 0 0 4px rgba(255,255,255,0.3),
+        0 10px 30px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* ================================
+   BOTONES
+================================ */
+
+button {
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+
+        linear-gradient(
+            45deg,
+            #ff512f,
+            #dd2476
+        );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+
+    transition:
+
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+
+/* Hover botón */
+
+button:hover {
+
+    transform:
+
+        translateY(-5px)
+        scale(1.05);
+
+
+    box-shadow:
+
+        0 15px 30px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* Click */
+
+button:active {
+
+    transform:scale(0.95);
+
+}
+
+
+
+/* ================================
+   TABLAS
+================================ */
+
+table {
+
+    width:100%;
+
+    margin-top:30px;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    animation: aparecer 1s ease;
+
+}
+
+
+
+th {
+
+    padding:15px;
+
+    background:
+
+        linear-gradient(
+            45deg,
+            #667eea,
+            #764ba2
+        );
+
+    color:white;
+
+}
+
+
+
+td {
+
+    padding:12px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+tr {
+
+    transition:0.3s;
+
+}
+
+
+
+tr:hover {
+
+    background:#f1f1f1;
+
+    transform:scale(1.02);
+
+}
+
+
+
+/* ================================
+   MENSAJES
+================================ */
+
+p {
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    animation:
+
+        aparecer 0.7s ease;
+
+}
+
+
+/* ================================
+   OPCIONES SELECT
+================================ */
+
+option {
+
+    padding:10px;
+
+}
